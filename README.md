@@ -6,7 +6,7 @@
 
 1. 将`stalker_trace_so.py`复制到`[IDA安装目录]\plugins`
 
-2. 在IDA中选择`Edit->Plugins->stalker_trace_so`，将会在so所在的目录下自动生成`trace_xxx.js`
+2. 在IDA中选择`Edit->Plugins->stalker_trace_so`，将会在so所在的目录下自动生成`trace_xxx.js`，你可以在任何想要开始追踪函数执行流的地方调用其中的`trace_so`函数
 
 3. frida运行脚本
    ```shell
