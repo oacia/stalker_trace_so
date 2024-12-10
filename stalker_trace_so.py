@@ -12,8 +12,8 @@ import random
 from functools import reduce
 
 template_js = '''
-var func_addr = [func_addr];
-var func_name = [func_name];
+var func_addr = [[func_addr]];
+var func_name = [[func_name]];
 var so_name = "[so_name]";
 
 /*
