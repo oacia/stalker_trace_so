@@ -89,13 +89,13 @@ function trace_so(){
                     if (print_stack) {
                         if (print_stack_mode === "FUZZY") {
                             iterator.putCallout((context) => {
-                                console.log("backtrace:\n"+Thread.backtrace(context, Backtracer.FUZZY).map(DebugSymbol.fromAddress).join('\n'));
+                                console.log("backtrace:\\n"+Thread.backtrace(context, Backtracer.FUZZY).map(DebugSymbol.fromAddress).join('\\n'));
                                 console.log('---------------------')
                             });
                         }
                         else if (print_stack_mode === "ACCURATE") {
                             iterator.putCallout((context) => {
-                                console.log("backtrace:\n"+Thread.backtrace(context, Backtracer.ACCURATE).map(DebugSymbol.fromAddress).join('\n'));
+                                console.log("backtrace:\\n"+Thread.backtrace(context, Backtracer.ACCURATE).map(DebugSymbol.fromAddress).join('\\n'));
                                 console.log('---------------------')
                             })
                         }
