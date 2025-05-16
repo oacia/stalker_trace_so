@@ -163,13 +163,12 @@ def generate_hook_code(template_js, func_addr, func_name, so_name):
 def generate_js_script(func_list):
     func_addr = []
     func_name = []
-    so_base = get_imagebase()
     for func_ea in func_list:
         # thumb mode
         if idc.get_sreg(func_ea, "T"):
-            func_addr.append(hex(func_ea + 1 - so_base))
+            func_addr.append(hex(func_ea + 1))
         else:
-            func_addr.append(hex(func_ea - so_base))
+            func_addr.append(hex(func_ea))
         func_name.append('"{}"'.format(idc.get_func_name(func_ea)))
 
     so_path, so_name = os.path.split(ida_nalt.get_input_file_path())
